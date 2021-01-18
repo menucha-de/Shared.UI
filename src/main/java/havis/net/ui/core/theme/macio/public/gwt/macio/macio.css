@@ -1,0 +1,470 @@
+@CHARSET "UTF-8";
+
+/* General styles for elements */
+
+*, html {
+	font-family: Arial;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+
+input, select, button, div {
+	outline: none;
+	
+}
+
+input, textarea, select {
+	color: inherit;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+	color: graytext;
+}
+*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+::-moz-focus-inner {
+	border: 0;
+}
+
+::-ms-clear {
+	display: none;
+}
+
+:focus {
+	outline: none;
+}
+
+[role=button], button {
+	cursor: pointer;
+}
+
+/* Styles for certain GWT widgets */
+
+.gwt-PopupPanel.progress {
+	z-index: 2;
+}
+
+.progress-background {
+	background: rgba(255,255,255,0.9);
+	z-index: 1;
+}
+
+.gwt-PopupPanel.message {
+	margin-left: 2.3em;
+	margin-top: 0.1em;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	padding: 0.5em;
+	background: rgba(255, 255, 255, 0.9);
+	border: 0.2em solid lightgray;
+	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+	right: 0.5em;
+}
+
+.gwt-PopupPanel.long-warning {
+	margin-left: 3.5em;
+	margin-top: 0.1em;
+	font-size: 1em;
+	line-height: 1.3em;
+	padding: 0.5em;
+	background: rgba(255, 255, 255, 0.9);
+	border: 0.2em solid lightgray;
+	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+	right: 5em;
+}
+
+.gwt-PopupPanel .popupContent .error-dot {
+	position: absolute;
+	background-color: red;
+	border-radius: 0.5em;
+	width: 0.5em;
+	height: 0.5em;
+	right: 0.3em;
+	top: 0.3em;
+}
+
+.gwt-PopupPanel .popupContent .warning {
+	background: url("images/Icons_Log_Warning.png") no-repeat left;
+	padding-left: 2.3em;
+}
+
+.gwt-ListBox::-ms-expand {
+    display: none;
+}
+
+.gwt-ListBox {
+	border: 1px #d3d3d3 solid;
+	border-radius: 22px;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-shadow: inset 1px 2px 5px 1px rgba(0,0,0,0.1);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: #FFFFFF url("images/LLRP_Region_Dropdown_Arrow.png") no-repeat right;
+}
+
+.gwt-TextBox {
+	border: 1px #d3d3d3 solid;
+	border-radius: 22px;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-shadow: inset 1px 2px 5px 1px rgba(0,0,0,0.1);
+}
+
+/* Styles for own widgets */
+
+.webui-Switcher {
+	height: 34px;
+	width: 65px;
+	line-height: 1em;
+	background-repeat: no-repeat;
+}
+
+.webui-Switcher-up,
+.webui-Switcher-up-hovering {
+	background-image: url("images/CONTENT_Switch_Off.png");
+}
+
+.webui-Switcher-up-disabled {
+	background-image: url("images/CONTENT_Switch_Off.png");
+	opacity: 0.6;
+}
+
+.webui-Switcher-down,
+.webui-Switcher-down-hovering {
+	background-image: url("images/CONTENT_Switch_On.png");
+}
+
+.webui-Switcher-down-disabled {
+	background-image: url("images/CONTENT_Switch_On.png");
+	opacity: 0.6;
+}
+
+.webui-ToggleContentButton {
+	line-height: 48px;
+	font-weight: bold;
+	padding-right: 52px;
+	background-image: url("images/LLRP_List_BT_Expand.png");
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.webui-SpinScale {
+	position: relative;
+	width: 225px;
+	height: 34px;
+}
+
+.webui-SpinScale.active {
+	background: url("images/LLRP_Power_Scale_Active.png") no-repeat;
+}
+
+.webui-SpinScale.empty {
+	background: url("images/LLRP_Power_Scale.png") no-repeat;
+}
+
+.webui-SpinScale.full {
+	background: url("images/LLRP_Power_Scale_Active_full.png") no-repeat;
+}
+.webui-SpinScale > button {
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: 0;
+}
+
+
+.webui-SpinScale > button.plus {
+	background-image: url("images/LLRP_Power_Scale_BT_Plus.png");
+	left: 191px;
+}
+
+.webui-SpinScale > button.minus {
+	background-image: url("images/LLRP_Power_Scale_BT_Minus.png");
+}
+
+.webui-SpinScale > .scale {
+	position: absolute;
+	left: 38px;
+	width: 150px;
+	height: 34px;
+	background-image: url("images/LLRP_Power_Scale_ActiveUnit.png");
+	background-repeat: repeat-x;
+}
+
+/* WidgetList */
+
+.webui-WidgetList {
+/* 	font-size: 1rem; */
+}
+
+.webui-WidgetList table {
+	border-collapse: collapse;
+}
+
+.webui-WidgetList-items > tbody > tr:nth-child(even) {
+	background-color: #FFFFFF;
+}
+
+.webui-WidgetList-header > thead > tr > th {
+	border-bottom: 1px solid lightgrey;
+}
+
+.webui-WidgetList-items > tbody > tr:nth-child(odd) {
+	background-color: #DDD;
+}
+
+.webui-WidgetList-container {
+	font-size: 1rem;
+}
+
+.webui-WidgetList-items,
+.webui-WidgetList-header {
+	table-layout: fixed;
+	width: 100%;
+}
+.webui-WidgetList-items td,
+.webui-WidgetList-header td {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.webui-WidgetList-items .level {
+	height: 32px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.webui-WidgetList-items .level.INFO {
+	background-image: url("images/Icons_Log_Info.png");
+}
+
+.webui-WidgetList-items .level.TRACE {
+	background-image: url("images/Icons_Log_Trace.png");
+}
+
+.webui-WidgetList-items .level.DEBUG {
+	background-image: url("images/Icons_Log_Debug.png");
+}
+
+.webui-WidgetList-items .level.WARNING {
+	background-image: url("images/Icons_Log_Warning.png");
+}
+
+.webui-WidgetList-items .level.ERROR {
+	background-image: url("images/Icons_Log_Error.png");
+}
+
+.webui-WidgetList-items .loglevel {
+	height: 32px;
+	font-size: 1em;
+	width: 12em;
+}
+
+.webui-WidgetList-items .clear {
+	height: 40px;
+	width: 40px;
+	border: 0;
+	background-color: transparent;
+	background-image: url("images/BT_40x40_Delete.png");
+	cursor: pointer;
+}
+
+.webui-WidgetList-items .clear:disabled {
+	opacity: 0.6;
+}
+
+/*--------*/
+.webui-ThreeStateSwitch {
+	height: 34px;
+	width: 64px;
+	line-height: 1em;
+	background-repeat: no-repeat;
+}
+
+.webui-ThreeStateSwitch.disabled {
+	opacity: 0.6;
+}
+
+.webui-ThreeStateSwitch-right {
+	background-image: url("images/Switch_True.png");
+}
+
+.webui-ThreeStateSwitch-left {
+	background-image: url("images/Switch_False.png");
+}
+
+.webui-ThreeStateSwitch-middle {
+	background-image: url("images/Switch_Auto_Disconnected.png");
+}
+
+.webui-ThreeStateSwitch-middle.connected {
+	background-image: url("images/Switch_Auto_Connected.png");
+}
+/*-------*/
+
+.webui-AntennaSwitch,
+.webui-PinStateSwitch {
+	height: 34px;
+	width: 64px;
+	line-height: 1em;
+	background-repeat: no-repeat;
+}
+
+.webui-AntennaSwitch.disabled {
+	opacity: 0.6;
+}
+
+.webui-AntennaSwitch.pending {
+	opacity: 0.6;
+}
+
+.webui-AntennaSwitch-true,
+.webui-PinStateSwitch-on {
+	background-image: url("images/Switch_True.png");
+}
+
+.webui-AntennaSwitch-false,
+.webui-PinStateSwitch-off {
+	background-image: url("images/Switch_False.png");
+}
+
+.webui-AntennaSwitch-auto,
+.webui-PinStateSwitch-irrelevant {
+	background-image: url("images/Switch_Auto_Disconnected.png");
+}
+
+.webui-AntennaSwitch-auto.connected {
+	background-image: url("images/Switch_Auto_Connected.png");
+}
+
+/****************************************************************/
+
+.webui-EnableButton {
+	width: 49px;
+	height: 49px;
+}
+.webui-EnableButton-up,
+.webui-EnableButton-up-hovering,
+.webui-EnableButton-up-disabled {
+	background-image: url("images/item_disabled.png");
+}
+.webui-EnableButton-up {
+	cursor: pointer;
+	cursor: hand;
+}
+.webui-EnableButton-up-hovering {
+	cursor: pointer;
+	cursor: hand;
+}
+.webui-EnableButton-up-disabled {
+	cursor: default;
+	opacity: .5;
+}
+.webui-EnableButton-down,
+.webui-EnableButton-down-hovering,
+.webui-EnableButton-down-disabled {
+	background-image: url("images/item_enabled.png");
+}
+.webui-EnableButton-down {
+  cursor: pointer;
+  cursor: hand;
+}
+.webui-EnableButton-down-hovering {
+  cursor: pointer;
+  cursor: hand;
+}
+.webui-EnableButton-down-disabled {
+  cursor: default;
+  opacity: .5;
+}
+
+.webui-EnableButton.subscriber .html-face {
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+.webui-EnableButton.subscriber {
+	margin-top: 0.4em;
+	margin-left: 0.2em;
+	height: 1.5em;
+	width: 1.5em;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+
+
+/****************************************************************/
+
+.webui-ExtendButton-up,
+.webui-ExtendButton-up-hovering,
+.webui-ExtendButton-up-disabled,
+.webui-ExtendButton-down,
+.webui-ExtendButton-down-hovering,
+.webui-ExtendButton-down-disabled {
+	background-image: url("images/extend_arrow.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 1em;
+	height: 1.8em;
+	transition: transform 0.1s;
+}
+.webui-ExtendButton-up,
+.webui-ExtendButton-up-hovering,
+.webui-ExtendButton-up-disabled {
+}
+.webui-ExtendButton-up {
+	cursor: pointer;
+	cursor: hand;
+}
+.webui-ExtendButton-up-hovering {
+	cursor: pointer;
+	cursor: hand;
+}
+.webui-ExtendButton-up-disabled {
+	cursor: default;
+	opacity: .5;
+}
+.webui-ExtendButton-down,
+.webui-ExtendButton-down-hovering,
+.webui-ExtendButton-down-disabled {
+	transform: rotate(-180deg);
+	border-right: 1px solid lightgray;
+}
+.webui-ExtendButton-down {
+  cursor: pointer;
+  cursor: hand;
+}
+.webui-ExtendButton-down-hovering {
+  cursor: pointer;
+  cursor: hand;
+}
+.webui-ExtendButton-down-disabled {
+  cursor: default;
+  opacity: .5;
+}

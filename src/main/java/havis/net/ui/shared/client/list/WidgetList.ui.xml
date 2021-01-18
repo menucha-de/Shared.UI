@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:r="urn:import:havis.net.ui.shared.client.list">
+	<ui:style>
+		
+	</ui:style>
+	<g:FocusPanel ui:field="panel" stylePrimaryName="webui-WidgetList">
+		<g:FlowPanel ui:field="container" stylePrimaryName="webui-WidgetList-container">
+			<g:FlexTable ui:field="header" stylePrimaryName="webui-WidgetList-header" />
+			<g:ScrollPanel ui:field="itemsContainer" addStyleNames="webui-WidgetList-scroll">
+				<g:FlexTable ui:field="items" stylePrimaryName="webui-WidgetList-items" />
+			</g:ScrollPanel>
+		</g:FlowPanel>
+	</g:FocusPanel>
+</ui:UiBinder> 

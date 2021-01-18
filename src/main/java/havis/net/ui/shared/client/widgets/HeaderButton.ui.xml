@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with type="havis.net.ui.shared.resourcebundle.ResourceBundle" field="res" />
+	<ui:style>
+	</ui:style>
+	<g:FlowPanel ui:field="button" styleName="{res.css.button}">
+		<g:FocusPanel ui:field="outer" styleName="{res.css.settingsButtonOuter}">
+			<g:HTML ui:field="inner" styleName="{res.css.settingsButtonInner}">
+				<img ui:field="icon" class="{res.css.settingsButtonIcon}" />
+			</g:HTML>
+		</g:FocusPanel>
+	</g:FlowPanel>
+</ui:UiBinder> 
